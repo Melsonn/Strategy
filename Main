@@ -3,15 +3,9 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        PaymentStrategy strategy;
-
-        String paymentMethod = "Kiwipayment";
-        if(paymentMethod.equals("creditcard")){
-            strategy = new CreditCardPayment();
-        } else{
-            strategy = new KiwiPayment();
-        }
-
-        strategy.pay(100);
+        Operator person1 = new Operator(new ManU(),"Alex");
+        System.out.println(person1.supports());
+        Operator person2 = new Operator(new Arsenal(), "Max");
+        System.out.println(person2.supports());
     }
 }
