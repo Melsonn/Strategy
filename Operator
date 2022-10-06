@@ -1,0 +1,15 @@
+package com.company;
+
+public class Operator {
+    private Support support;
+    private String name;
+
+    public Operator(Support support, String name) {
+        this.support = support;
+        this.name = name;
+    }
+
+    public String supports(){
+        return name + " " +  support.whichTeam();
+    }
+}
